@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "nsj";
+    src: url(polices/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "bpsi";
+    src: url(polices/Bitcount_Prop_Single_Ink/BitcountPropSingleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf);
+}
+
+* {
+    --primaire: #2c2c54;
+    --secondaire: #40407a;
+
+    --violet-primaire: #8854D0;
+    --violet-secondaire: #A55EEA;
+
+    --rouge-primaire: #EB3B5A;
+    --rouge-secondaire: #FC5C65;
+
+    margin: 0;
+    padding: 0;
+    font-family: "nsj", serif;
+    font-size: 16px;
+}
+
+body, section {
+    background-color: var(--primaire);
+}
