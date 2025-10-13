@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "nsj";
+    src: url(polices/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+* {
+    --primaire: #2c2c54;
+    --secondaire: #40407a;
+
+    --violet-primaire: #8854D0;
+    --violet-secondaire: #A55EEA;
+
+    --rouge-primaire: #EB3B5A;
+    --rouge-secondaire: #FC5C65;
+
+    --white:#ffffff;
+
+    font-family: "nsj", serif;
+    font-size: 16px;
+}
+
+header {
+    width: 60%;
+    height: 10%;
+    display: grid;
+    grid-template-areas: "stack";
+    position: fixed;
+    top: 1%;
+    left: 20%;
+    z-index: 100;
+}
+
+.header-fond-haut,
+.header-fond-bas,
+.header-nav {
+    grid-area: stack;
+    width: 96%; 
+    height: 80%; 
+}
+
+.header-fond-haut {
+    background-color: var(--rouge-primaire);
+    z-index: 1;
+    transform: translate(0, 0); 
+}
+
+.header-fond-bas {
+    background-color: var(--violet-primaire);
+    z-index: 2;
+    transform: translate(3%, 20%); 
+}
+
+.header-nav {
+    background-color: var(--primaire);
+    display: flex;
+    transform: translate(1.5%, 10%);
+    z-index: 3; 
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    background-color: var(--secondaire);
+    width: 20%;
+    height: 50%;
+    color: var(--white);
+    margin: 0 4%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.page-actuelle {
+    display: flex;
+    background-color: var(--violet-primaire);
+    width: 20%;
+    height: 50%;
+    color: var(--white);
+    margin: 0 4%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.page:hover, .page-actuelle:hover {
+    box-shadow: 2px 2px 2px var(--rouge-secondaire);
+}
