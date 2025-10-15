@@ -290,3 +290,23 @@ Première Zone d'Information
     text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
 
+/*--------------------------------
+Zone Carousel
+--------------------------------*/
+
+/*-----Fond Vidéo-----*/
+
+.video-background-carousel {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "stack";
+    position: relative;
+    z-index: 1;
+}
+
+#background-video-carousel {
+    width: 100%;
+    height: 100vh;
+    object-fit : cover;
+}
