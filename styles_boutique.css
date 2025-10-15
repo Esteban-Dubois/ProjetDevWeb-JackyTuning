@@ -37,18 +37,7 @@ body {
   color: #eee;
 }
 
-header {
-  background-color: #222;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #ff0000;
-}
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #ff0000;
-}
 
 nav ul {
   list-style: none;
