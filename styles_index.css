@@ -1,6 +1,6 @@
 @font-face {
     font-family: "nsj";
-    src: url(polices/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+    src: url(polices/NotoSansJP-Regular.ttf);
 }
 
 @font-face {
@@ -289,3 +289,4 @@ Première Zone d'Information
     font-family: "nsj-b", serif;
     text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
+
