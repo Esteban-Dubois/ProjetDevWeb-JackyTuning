@@ -1,6 +1,6 @@
 @font-face {
     font-family: "nsj";
-    src: url(polices/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+    src: url(polices/Noto_Sans_JP/NotoSansJP-Regular.ttf);
 }
 
 * {
@@ -84,4 +84,5 @@ header {
 
 .page:hover, .page-actuelle:hover {
     box-shadow: 2px 2px 2px var(--rouge-secondaire);
+
 }
