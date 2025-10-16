@@ -19,7 +19,7 @@
         </header>
         <div class="video-accueil">
             <video autoplay muted loop playsinline id="background-video">
-                <source src="images-index/background-header.mp4" type="video/mp4">
+                <source src="images_index/background-header.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -28,6 +28,11 @@
                 <div class="glitch" data-text="Never Stop Tuning :)">Never Stop Tuning :)</div>
             </div>
 
+            <div class="semi-ligne-horizontal2"></div>
+            <div class="ligne-horizontal"></div>
+            <div class="voiture-gauche-droite">
+                <img class="animation-voiture" src="images_index/voiture-verte.png" alt="petite voiture verte">
+            </div>
             <div class="ligne-horizontal"></div>
             <div class="semi-ligne-horizontal"></div>
 
@@ -42,49 +47,57 @@
 
             <div class="semi-ligne-horizontal2"></div>
             <div class="ligne-horizontal"></div>
-
-            <div class="avertissement">
-                <img src="images-index/warning-icon.svg" alt="Icon Warning">
-                <p>
-                    Pour une <b>meilleure expérience</b> nous vous 
-                    recommendons d'activer votre <b>son</b>.
-                </p>
+            <div class="voiture-droite-gauche">
+                <img class="animation-voiture" src="images_index/voiture-jaune.png" alt="petite voiture jaune">
             </div>
+            <div class="ligne-horizontal"></div>
+            <div class="semi-ligne-horizontal"></div>
 
             </div>
 
             <div class="video-background-carousel">
-                <video autoplay muted loop playsinline id="background-video-carousel">
-                    <source src="images-index/video-ville.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline id="video-background-carousel-id">
+                     <source src="images_index/video-ville.mp4" type="video/mp4">
                 </video>
-            </div>
-        
+
+                <div class="superposition-carousel">
+
+                    <div class="div-carousel">
+                        <p>Retrouvez ici quelques exemples de nos meilleurs tuning !</p>
+                        <div class="defilement-carousel">
+                        
+                            <div class="element-carousel">
+                                <video autoplay muted loop playsinline src="images_index/video-subaru.mp4"></video>
+                            </div>
+
+                            <div class="element-carousel">
+                                <video autoplay muted loop playsinline src="images_index/video-bmw.mp4"></video>
+                            </div>
+
+                            <div class="element-carousel">
+                                <video autoplay muted loop playsinline src="images_index/video-alpine.mp4"></video>
+                            </div>
+
+                            <div class="element-carousel">
+                                <video autoplay muted loop playsinline src="images_index/video-chevrolet.mp4"></video>
+                            </div>
+
+                            <div class="element-carousel">
+                                <video autoplay muted loop playsinline src="images_index/video-jesko.mp4"></video>
+                            </div>
 
 
-            <div class="carousel-container">
-            <div class="carousel-track">
-            
-            <div class="element-carousel">
-                <h2>Diapositive 1</h2>
-                <iframe width="560" height="315" src="images-index/background-header.mp4" frameborder="0" allowfullscreen></iframe>
-            </div>
+                        </div>
+                        
+                        <img src="images_index/fleche-droite.svg" class="fleche-droite" alt="Image fleèce droite">
+                        <img src="images_index/fleche-gauche.svg" class="fleche-gauche" alt="Image flèche gauche">
+                    </div>
+                </div>
 
-            <div class="element-carousel">
-                <h2>Diapositive 2</h2>
-                <iframe width="560" height="315" src="images-index/background-header.mp4" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <div class="zone-info-2">
 
-            <div class="element-carousel">
-                <h2>Diapositive 3</h2>
-                <iframe width="560" height="315" src="images-index/background-header.mp4" frameborder="0" allowfullscreen></iframe>
-            </div>
+        </div>
 
-            </div>
-
-        <button class="carousel-button prev">❮</button>
-        <button class="carousel-button next">❯</button>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="script_index.js"></script>
     </body>
 </html>
