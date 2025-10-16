@@ -19,8 +19,9 @@
 }
 
 * {
-    --primaire: #2c2c54;
-    --secondaire: #40407a;
+    --primaire:#212140; 
+    --secondaire: #2c2c54;
+    --tertiaire: #40407a;
 
     --violet-primaire: #8854D0;
     --violet-secondaire: #A55EEA;
@@ -84,9 +85,9 @@ Première Zone d'Information
 
 .glitch {
    position: relative;
-   font-size: 50px;
+   font-size: 65px;
    font-weight: bold;
-   color: #FFFFFF;
+   color: var(--white);
    letter-spacing: 3px;
    z-index: 1;
    font-family: "bbh",serif;
@@ -112,7 +113,7 @@ Première Zone d'Information
    left: 2px;
    width: 100%;
    color: 30px;
-   background-color: #2C2C54;
+   background-color: var(--primaire);
    overflow: hidden;
    clip: rect(0, 900px, 0, 0);
    animation: noise-after 2s infinite linear alternate-reverse;
@@ -258,21 +259,41 @@ Première Zone d'Information
     width: 80%;
     margin: 1% 10%;
     height: 3px;
-    background-color: var(--secondaire);
+    background-color: var(--tertiaire);
 }
 
 .semi-ligne-horizontal, .semi-ligne-horizontal2 {
     width: 40%;
     height: 3px;
-    background-color: var(--secondaire);
 }
 
 .semi-ligne-horizontal {
    margin: 1% 50% 1% 10%;
+   background-color: var(--white);
+   box-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--rouge-secondaire),
+      0 0 82px var(--rouge-secondaire),
+      0 0 92px var(--rouge-secondaire),
+      0 0 102px var(--rouge-secondaire),
+      0 0 151px var(--rouge-secondaire);
 }
+
 
 .semi-ligne-horizontal2 {
    margin: 1% 10% 1% 50%;
+   background-color: var(--white);
+   box-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-secondaire),
+      0 0 151px var(--violet-secondaire);
 }
 
 .zone-texte{
@@ -286,6 +307,105 @@ Première Zone d'Information
 }
 
 .zone-texte>p>b {
+    font-family: "nsj-b", serif;
+    text-shadow: 2px 2px 2px var(--rouge-secondaire);
+}
+
+/*-----Animation voitures-----*/
+
+.animation-voiture {
+   width: 100%;
+   height: 100%;
+}
+
+.voiture-gauche-droite {
+   height: 2%;
+   width: 4%;
+   left: 21%;
+   position: relative;
+   animation-name:voiture-gauche-droite ;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   z-index: 2;
+   animation-timing-function: linear;
+}
+
+@keyframes voiture-gauche-droite {
+   0% {
+      left: 11%;
+      opacity: 50%;
+   }
+    10% {
+      opacity: 100%;
+    }
+   40% {
+      opacity: 100%;
+   }
+   50% {
+      left: 83%;
+      opacity: 25%;
+   }
+    
+   50.1% {
+      opacity: 0%; 
+   }
+   100% {
+      opacity: 0%; 
+   }
+}
+
+.voiture-droite-gauche {
+   height: 2%;
+   width: 4%;
+   left: 21%;
+   position: relative;
+   animation-name:voiture-droite-gauche ;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   z-index: 2;
+   animation-timing-function: linear;
+   animation-delay: 2s;
+}
+
+@keyframes voiture-droite-gauche {
+   0% {
+      left: 83%;
+      opacity: 50%;
+   }
+    10% {
+      opacity: 100%;
+    }
+   40% {
+      opacity: 100%;
+   }
+   50% {
+      left: 11%;
+      opacity: 25%;
+   }
+    
+   50.1% {
+      opacity: 0%; 
+   }
+   100% {
+      opacity: 0%; 
+   }
+}
+
+
+
+/*-----Warning-----*/
+
+.avertissement {
+   display: flex;
+   width: 80%;
+   margin: 2% 0 0 10%;
+}
+
+.avertissement>p {
+   color: var(--white);
+}
+
+.avertissement>p>b {
     font-family: "nsj-b", serif;
     text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
@@ -305,61 +425,116 @@ Zone Carousel
     z-index: 1;
 }
 
-#background-video-carousel {
+#video-background-carousel-id {
     width: 100%;
     height: 100vh;
     object-fit : cover;
+    z-index: 0; 
+}
+
+.superposition-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; 
 }
 
 /*-----Carousel-----*/
 
-.carousel-container {
-    /* Cache le contenu qui déborde (les autres diapositives) */
+.div-carousel {
     overflow: hidden; 
     position: relative;
-    width: 80%; /* Ajustez la largeur du carrousel */
-    margin: 50px auto;
-    border: 1px solid #ccc;
+    width: 100%; 
+    height: 100%;
+    padding-top: 3%;
 }
 
-.carousel-track {
-    /* Le 'track' contient toutes les diapositives */
-    display: flex;
-    /* Transition pour l'effet de défilement fluide */
-    transition: transform 0.3s ease-in-out; 
+.div-carousel p {
+   display: flex;
+   justify-content: center;
+   font-size: 40px;
+   color: var(--white);
+   text-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-primaire),
+      0 0 151px var(--violet-primaire);
+   padding-bottom: 2%;
+}
+
+.defilement-carousel {
+   display: flex;
+   transition: transform 0.5s ease-in-out; 
 }
 
 .element-carousel {
-    /* Chaque diapositive prend la largeur totale du conteneur */
     min-width: 100%; 
+    padding: 0 10%;
     box-sizing: border-box;
-    padding: 20px;
     text-align: center;
+    color: var(--white);
 }
 
-/* Style des vidéos/iframes dans le carrousel */
-.element-carousel iframe {
+.element-carousel video {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
+    display: block; 
+    margin: 0 auto;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-button {
+.fleche-droite, .fleche-gauche {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 50%; 
+    transform: translateY(-50%); 
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--rouge-secondaire); 
     border: none;
-    padding: 10px;
+    padding: 15px 10px;
     cursor: pointer;
-    z-index: 10;
-    font-size: 20px;
+    z-index: 10; 
+    font-size: 30px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
 }
 
-.carousel-button.prev {
-    left: 10px;
+.fleche-droite:hover, .fleche-gauche:hover {
+    background: var(--violet-secondaire);
+    opacity: 0.8;
 }
 
-.carousel-button.next {
-    right: 10px;
+.fleche-gauche {
+   left: 15px;
+}
+
+.fleche-gauche img {
+   display: flex;
+   justify-content: center;
+}
+
+.fleche-droite {
+   right: 15px;
+}
+
+/*--------------------------------
+Zone Info 2
+--------------------------------*/
+
+.zone-info-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primaire);
+    padding-bottom: 4%;
 }
