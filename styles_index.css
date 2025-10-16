@@ -310,3 +310,56 @@ Zone Carousel
     height: 100vh;
     object-fit : cover;
 }
+
+/*-----Carousel-----*/
+
+.carousel-container {
+    /* Cache le contenu qui déborde (les autres diapositives) */
+    overflow: hidden; 
+    position: relative;
+    width: 80%; /* Ajustez la largeur du carrousel */
+    margin: 50px auto;
+    border: 1px solid #ccc;
+}
+
+.carousel-track {
+    /* Le 'track' contient toutes les diapositives */
+    display: flex;
+    /* Transition pour l'effet de défilement fluide */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.element-carousel {
+    /* Chaque diapositive prend la largeur totale du conteneur */
+    min-width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style des vidéos/iframes dans le carrousel */
+.element-carousel iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
