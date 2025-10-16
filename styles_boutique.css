@@ -142,7 +142,7 @@ footer {
 .recherche-barre boutton {
   padding: 6px 10px;
   background-color: var(--violet-primaire);
-  color: white;
+  color: red;
   border: 2px solid var(--violet-primaire);
   border-left: none;
   border-radius: 0 4px 4px 0;
