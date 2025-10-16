@@ -1,31 +1,106 @@
-@font-face {
-    font-family: "nsj";
-    src: url(polices/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+.anim_nav_b{
+    height: 5%;
+    width: 7.5%;
+    left: 21%;
+    top: 9%;
+    position: fixed;
+    animation-name: a_nav_b;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    z-index: 1000;
+    animation-timing-function: linear;
 }
+@keyframes a_nav_b {
+  0%     {left: 21%;opacity: 50%;}
+  10%    {opacity: 100%;}
+  39%    {opacity: 100%;}
+  40%    {opacity: 75%;}
+  45%    {opacity: 50%;}
+  50%    {left: 73.5%;opacity: 25%;}
+  50.1%  {opacity: 0%;}
+  75%    {opacity: 0%;}
+  100%   {opacity: 0%;}
 
-@font-face {
-    font-family: "bpsi";
-    src: url(polices/Bitcount_Prop_Single_Ink/BitcountPropSingleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf);
 }
-
-* {
-    --primaire: #2c2c54;
-    --secondaire: #40407a;
-
-    --violet-primaire: #8854D0;
-    --violet-secondaire: #A55EEA;
-
-    --rouge-primaire: #EB3B5A;
-    --rouge-secondaire: #FC5C65;
-
-    --white:#ffffff;
-
-    margin: 0;
-    padding: 0;
-    font-family: "nsj", serif;
-    font-size: 16px;
+.anim_nav_t{
+    opacity: 0%;
+    height: 5%;
+    width: 7.5%;
+    left: 21%;
+    top: -1%;
+    position: fixed;
+    animation-name: a_nav_t;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    z-index: 1000;
+    animation-timing-function: linear;
 }
+@keyframes a_nav_t {
+  0%     {left: 73.5%;opacity: 50%;}
+  10%    {opacity: 100%;}
+  39%    {opacity: 100%;}
+  40%    {opacity: 75%;}
+  45%    {opacity: 50%;}
+  50%    {left: 21%;opacity: 25%;}
+  50.1%  {opacity: 0%;}
+  75%    {opacity: 0%;}
+  100%   {opacity: 0%;}
 
-html, body {
-    height: 100%;
+}
+.anim{
+  height: 100%;
+}
+.anim_p{
+  height: 70vh;
+  position:absolute;
+  padding: 0;
+  margin: 0;
+  left: -30%;
+  top: 20%;
+}
+.panier{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15%;
+  margin-top: 15%;
+
+}
+.l{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2% 0;
+}
+.tuning{
+  height: 5%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(137, 43, 226, 0.486);
+  border-radius: 15px;
+  padding: 1%;
+  margin: 0 5%;
+}
+.tuning>img{
+  height: auto;
+  width: 80%;
+}
+.buy_del{
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  justify-content: space-between;
+}
+.del{
+  background-color: red;
+  padding: 2%;
+  border-radius: 10px;
+}
+.buy{
+  background-color: green;
+  padding: 2%;
+  border-radius: 10px;
 }
