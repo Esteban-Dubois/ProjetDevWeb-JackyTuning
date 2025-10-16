@@ -123,3 +123,44 @@ footer {
   font-size: 0.9em;
   border-top: 2px solid #ff0000;
 }
+/* Style général pour la barre de recherche */
+search-bar {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 20px auto;
+   max-width: 400px;
+}
+/* Champ de recherche */
+search-bar input[type="search"] {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px 0 0 4px;
+   font-size: 16px;
+}
+/* Bouton de recherche */
+search-bar button {
+   padding: 10px 15px;
+   background-color: #2196F3;
+   color: white;
+   border: none;
+   border-radius: 0 4px 4px 0;
+   cursor: pointer;
+}
+search-bar button:hover {
+   background-color: #1976D2;
+}
+/* Responsive pour petits écrans */
+@media screen and (max-width: 600px) {
+   .search-bar {
+       flex-direction: column;
+       width: 100%;
+   }
+   .search-bar input[type="search"],
+   .search-bar button {
+       width: 100%;
+       border-radius: 4px;
+       margin-bottom: 10px;
+   }
+}
