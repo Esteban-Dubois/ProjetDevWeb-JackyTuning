@@ -52,56 +52,7 @@ body {
  75% { transform: translateY(5px) }
  100% { transform: translateX(0) }
 }
-.anim_nav_b{
-    height: 5%;
-    width: 7.5%;
-    left: 21%;
-    top: 9%;
-    position: fixed;
-    animation-name: a_nav_b;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    z-index: 1000;
-    animation-timing-function: linear;
-}
-@keyframes a_nav_b {
-  0%     {left: 21%;opacity: 50%;}
-  10%    {opacity: 100%;}
-  39%    {opacity: 100%;}
-  40%    {opacity: 75%;}
-  45%    {opacity: 50%;}
-  50%    {left: 73.5%;opacity: 25%;}
-  50.1%  {opacity: 0%;}
-  75%    {opacity: 0%;}
-  100%   {opacity: 0%;}
 
-}
-.anim_nav_t{
-    opacity: 0%;
-    height: 5%;
-    width: 7.5%;
-    left: 21%;
-    top: -1%;
-    position: fixed;
-    animation-name: a_nav_t;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    z-index: 1000;
-    animation-timing-function: linear;
-}
-@keyframes a_nav_t {
-  0%     {left: 73.5%;opacity: 50%;}
-  10%    {opacity: 100%;}
-  39%    {opacity: 100%;}
-  40%    {opacity: 75%;}
-  45%    {opacity: 50%;}
-  50%    {left: 21%;opacity: 25%;}
-  50.1%  {opacity: 0%;}
-  75%    {opacity: 0%;}
-  100%   {opacity: 0%;}
-
-}
 .anim{
   height: 100%;
 }
@@ -127,12 +78,25 @@ body {
   padding: 0;
   margin: 0;
   left: 100%;
-  top: 20%;
+  top: 40%;
   animation-name: a_app_r;
-  animation-duration: 2s;
+  animation-duration: 1000ms;
   animation-timing-function: linear;
   z-index: 100;
+  opacity: 0%;
+  animation-delay: 2s;
 
+}
+@keyframes a_app_r {
+  0% {opacity: 100%; left: 100%; }
+  10% {left: 90%; }
+  20% {left: 80%; }
+  30% {left: 70%;}
+  40% {left: 68%; top: 40%;}
+  50% {left: 66%; top: 40%;}
+  60% {left: 64%; top: 40%;}
+  70% {left: 62%; top: 40%;}
+  100%{opacity: 100%;left: 62%; top: 100%;}
 }
 
 .a{
@@ -170,13 +134,13 @@ body {
   animation-duration: 700ms;
   animation-timing-function:ease-in;
   position: relative;
-  transform: translateY(-115vh);
+  transform: translateY(-200vh);
   top :40%;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
 }
 @keyframes a_app_l {
- 0% { transform: translateY(-115vh) }
+ 0% { transform: translateY(-200vh) }
  5% {transform: translateY(-110vh)}
  40%{transform: translateY(-100vh) }
  50%{transform: translateY(-90vh) }
