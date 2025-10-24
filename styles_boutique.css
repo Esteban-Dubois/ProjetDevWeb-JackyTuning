@@ -99,7 +99,7 @@ nav a:hover {
 .price {
   display: block;
   margin: 10px 0;
-  font-size: 0.55em;
+  font-size: 0.25em;
   color: #0f0;
   text-decoration: line-through;
 }
