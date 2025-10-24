@@ -99,8 +99,16 @@ nav a:hover {
 .price {
   display: block;
   margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 0.5em;
   color: #0f0;
+  text-decoration: line-through;
+}
+.price2 {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.5em;
+  color:#ff0000;
+  
 }
 
 button {
@@ -142,10 +150,45 @@ footer {
 .recherche-barre boutton {
   padding: 6px 10px;
   background-color: var(--violet-primaire);
-  color: red;
+  color: white;
   border: 2px solid var(--violet-primaire);
   border-left: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   font-size: 16px;
+}
+.carousel{
+  margin:100px auto;
+  width: 90%;
+  border:5px solid red;
+  display: flex;
+  overflow-x: auto;
+  gap:1em;
+
+}
+.carousel::-webkit-scrollbar{
+  display: none;
+}
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1em;
+  animation: spin 25s infinite linear;
+  padding-right: 1em;
+}
+.card {
+  flex:0 0 5em;
+  height:5em;
+  padding: 1em;
+  background: #40407a;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+
+}
+@keyframes spin {
+  from{translate: 0;}
+  to{translate: -100%;}
 }
