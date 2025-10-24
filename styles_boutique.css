@@ -99,14 +99,14 @@ nav a:hover {
 .price {
   display: block;
   margin: 10px 0;
-  font-size: 0.5em;
+  font-size: 0.55em;
   color: #0f0;
   text-decoration: line-through;
 }
 .price2 {
   display: block;
   margin: 10px 0;
-  font-size: 0.5em;
+  font-size: 0.55em;
   color:#ff0000;
   
 }
@@ -181,11 +181,16 @@ footer {
   flex:0 0 5em;
   height:5em;
   padding: 1em;
-  background: #40407a;
+  background:  #40407a;
   font-size: 3rem;
   border-radius: .2em;
   text-align: center;
   align-content: center;
+  border-color: #ff0000;
+  img {
+   max-width: 50%;
+   max-height: 50%;
+}
 
 }
 @keyframes spin {
