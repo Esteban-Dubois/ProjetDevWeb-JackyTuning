@@ -213,3 +213,56 @@ body{
     from{ scale: 0; }
     to{ scale: 1; }
 }
+.anim_nav_b{
+    height: 5%;
+    width: 7.5%;
+    left: 21%;
+    top: 9%;
+    position: fixed;
+    animation-name: a_nav_b;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    z-index: 1000;
+    animation-timing-function: linear;
+}
+@keyframes a_nav_b {
+  0%     {left: 21%;opacity: 50%;}
+  10%    {opacity: 100%;}
+  39%    {opacity: 100%;}
+  40%    {opacity: 75%;}
+  45%    {opacity: 50%;}
+  50%    {left: 73.5%;opacity: 25%;}
+  50.1%  {opacity: 0%;}
+  75%    {opacity: 0%;}
+  100%   {opacity: 0%;}
+
+}
+.anim_nav_t{
+    opacity: 0%;
+    height: 5%;
+    width: 7.5%;
+    left: 21%;
+    top: -1%;
+    position: fixed;
+    animation-name: a_nav_t;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    z-index: 1000;
+    animation-timing-function: linear;
+}
+@keyframes a_nav_t {
+  0%     {left: 73.5%;opacity: 50%;}
+  10%    {opacity: 100%;}
+  39%    {opacity: 100%;}
+  40%    {opacity: 75%;}
+  45%    {opacity: 50%;}
+  50%    {left: 21%;opacity: 25%;}
+  50.1%  {opacity: 0%;}
+  75%    {opacity: 0%;}
+  100%   {opacity: 0%;}
+
+}
+.anim{
+  height: 100%;
+}
