@@ -17,5 +17,125 @@
                     <a class="page-actuelle" href="apropos.html">A propos</a>
                 </div>
         </header>
+
+        <div class="loader-container">
+            <div class="load">Chargement...</div>
+            <div class="progress-bar">
+                <span class="progress"></span>
+            </div>
+        </div>
+
+        <div class="back-black"></div>
+
+        <section class="section01">
+
+
+            <video autoplay muted loop class ="background_v">
+                <source src="Images apropos/Back01.mp4" type="video/mp4">
+                erreur de chargement de la video
+            </video>
+
+            <div class="baton0"></div>
+            <div class="baton"></div>
+
+            <div class="content01">
+                <div class="slide-title">
+                <span class="h1_title-part1">A Propos_</span><span class="h1_title-part2">de nous..</span>
+                </div>
+                <p>D'ou viennent nos motivations....</p>
+                <a class="continuer" href="#histoire">continuer</a>
+
+            </div>
+            
+            
+        </section>
+
+        <secction class="section02" id="histoire">
+            <div class="story_ligne01">
+
+                <div class="story_text">
+                    <h2>Notre Histoire</h2>
+                    <p>Jacky Tuning est né de la passion commune de deux amis d'enfance pour l'automobile et la
+                         personnalisation de véhicules. Depuis notre garage improvisé
+                         jusqu'à notre boutique en ligne, nous avons toujours été animés
+                          par le désir d'offrir des produits de qualité qui permettent à
+                           chacun d'exprimer son style unique à travers sa voiture.</p>
+                </div>
+
+                <div class="story_image">
+                    <img src="Images apropos/histoire.png" alt="Notre Histoire">
+                </div>
+
+            </div>
+
+            <div class="story_ligne02">
+
+                <div class="story_image">
+                    <img src="Images apropos/histoire.png" alt="Notre Histoire">
+                </div>
+
+                <div class="story_text">
+                    <h2>Notre Histoire 02</h2>
+                    <p>Au fil des années, nous avons élargi notre gamme de produits pour inclure des accessoires innovants et des pièces de performance, tout en restant fidèles à notre engagement envers la satisfaction client et l'excellence. Aujourd'hui, Jacky Tuning est fier d'être une référence dans le monde du tuning automobile, grâce à notre dévouement, notre expertise et notre amour pour ce que nous faisons.</p>
+                </div> 
+
+            </div>
+        </secction>
+
+
+        <secction class="section03">
+            
+        
+        <div class="formulair">
+                <div class="ligne1">
+                    <div class="ligne1_1">
+                    <label for="nom">Nom : </label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="ligne1_2">
+                    <label for="prenom">prenom : </label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required>
+                    </div>
+                </div>
+                <br>
+                <div class="ligne2">
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <br>
+                <div class="ligne3">
+                <label for="message">Message : </label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                </div>
+                <br>
+                <button class="envoyer">Envoyer</button>
+
+        </div>
+
+        <div class="questionnaire">
+
+            <div>
+                <div class="ligne_q1">
+                    <label for="satisfaction">Etes-vous satisfait de notre site ? </label>
+                    <select id="satisfaction" name="satisfaction">
+                        <option value="tres_satisfait">Très satisfait</option>
+                        <option value="satisfait">Satisfait</option>
+                        <option value="neutre">Neutre</option>
+                        <option value="insatisfait">Insatisfait</option>
+                        <option value="tres_insatisfait">Très insatisfait</option>
+                    </select>
+                </div>
+                <div class="ligne_q2">
+                    <label for="amelioration">Que pourrions-nous améliorer ? </label>
+                    <textarea id="amelioration" name="amelioration" placeholder="Vos suggestions"></textarea>
+                </div>
+                <button class="soumettre">Soumettre</button>
+            </div>
+        </div>
+
+        </secction>
+
+
+
     </body>
 </html>
