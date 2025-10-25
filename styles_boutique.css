@@ -363,6 +363,5 @@ footer {
 .voiture3 .toit{background:linear-gradient(45deg,#3399ff,#3366ff);}
 .voiture3 .fenetre{background:rgba(173,216,255,0.85);}
 
-
 @keyframes deplacerVoiture{0%{left:-200px;}100%{left:100vw;}}
 
