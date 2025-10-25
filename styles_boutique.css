@@ -242,3 +242,127 @@ footer {
       0 0 151px var(--violet-primaire);
     padding: 2%;
 }
+
+.vroumvroum {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.tutut {
+  position: relative;
+  height: 250px;
+  background: #111;
+  overflow: hidden;
+ 
+
+}
+
+
+.ville {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 1;
+}
+.batiment {
+  width: 20px;
+  background: linear-gradient(to top,#928181,#333);
+  box-shadow: 0 0 5px #0ff,0 0 10px #0ff inset;
+  animation: lumiereFenetre 3s infinite alternate;
+  position: relative;
+}
+.batiment:nth-child(2){height:50px;}
+.batiment:nth-child(3){height:80px;}
+.batiment:nth-child(4){height:60px;}
+.batiment:nth-child(5){height:90px;}
+@keyframes lumiereFenetre {
+  0%{opacity:0.2;}50%{opacity:1;}100%{opacity:0.2;}
+}
+
+
+.route {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
+  background: linear-gradient(#111 50%, #222 50%);
+  overflow-x: auto;
+  z-index:2;
+  gap:1em;
+  
+}
+.route::-webkit-scrollbar{
+  display: none;
+}
+.lignes {
+  position:absolute;
+  top:27px;
+  width:100%;
+  height:6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1em;
+  animation: deplacerLigne 5s infinite linear;
+  padding-right: 1em;
+}
+.ligne {
+    flex:0 0 5em;
+  width:50px; height:3.5px;
+  
+  background: linear-gradient(90deg,#0ff,#0aa);
+  margin-right:50px;
+  font-size: 3rem;
+  border-radius: .2em;
+  box-shadow:0 0 10px #0ff;
+ 
+}
+@keyframes deplacerLigne {
+  from{translate: 0;}
+  to{translate: -100%;}
+}
+
+.voiture-conteneur { position:absolute; bottom:20px; }
+.voiture { position:relative; width:160px; height:60px; }
+.carrosserie { position:absolute; bottom:10px; width:100%; height:35px; border-radius:15px 15px 10px 10px; box-shadow:0 3px 8px rgba(0,0,0,0.6);}
+.toit { position:absolute; bottom:30px; width:90px; height:20px; border-radius:12px 12px 0 0; transform:skewX(-8deg); z-index:2;}
+.fenetre { position:absolute; bottom:32px; width:84px; height:16px; border-radius:5px; z-index:3; box-shadow:inset 0 0 3px rgba(255,255,255,0.7);}
+.roue { position:absolute; bottom:0; width:30px; height:30px; background:#111; border-radius:50%; border:4px solid #222; z-index:4; animation: tournerRoue 0.5s linear infinite;}
+.roue.avant{left:15px;} .roue.arriere{right:15px;}
+.phare { position:absolute; bottom:20px; width:15px; height:8px; border-radius:50%; box-shadow:0 0 18px yellow; z-index:5; animation: clignoter 1s infinite alternate;}
+.phare.gauche{left:2px;} .phare.droite{right:2px;}
+.fumee { position:absolute; bottom:10px; right:-20px; width:15px; height:6px; background:rgba(200,200,200,0.6); border-radius:50%; filter:blur(1px); animation: fumeeAnim 0.7s infinite linear; }
+
+
+@keyframes tournerRoue{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes clignoter{0%{opacity:0.5;}100%{opacity:1;}}
+@keyframes fumeeAnim{0%{right:-20px;opacity:0;transform:scale(0.5);}50%{opacity:1;transform:scale(1);}100%{right:150px;opacity:0;transform:scale(1.5);}}
+
+.voiture1 { animation: deplacerVoiture 5s linear infinite; }
+.voiture2 { animation: deplacerVoiture 7s linear infinite; bottom:60px; transform:scale(0.75);}
+.voiture3 { animation: deplacerVoiture 6s linear infinite; bottom:40px; transform:scale(0.8);}
+
+.voiture1 .carrosserie{background:linear-gradient(45deg,#ff0044,#ff7700);}
+.voiture1 .toit{background:linear-gradient(45deg,#ff3399,#ff3300);}
+.voiture1 .fenetre{background:rgba(173,216,230,0.85);}
+
+.voiture2 .carrosserie{background:linear-gradient(45deg,#00ff88,#00cc55);}
+.voiture2 .toit{background:linear-gradient(45deg,#00ffcc,#00aa88);}
+.voiture2 .fenetre{background:rgba(173,255,200,0.8);}
+
+.voiture3 .carrosserie{background:linear-gradient(45deg,#0055ff,#0033ff);}
+.voiture3 .toit{background:linear-gradient(45deg,#3399ff,#3366ff);}
+.voiture3 .fenetre{background:rgba(173,216,255,0.85);}
+
+
+@keyframes deplacerVoiture{0%{left:-200px;}100%{left:100vw;}}
+
