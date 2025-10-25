@@ -110,6 +110,13 @@ nav a:hover {
   color:#ff0000;
   
 }
+.price2 {
+  display: block;
+  margin: 10px 0;
+  font-size: 1em;
+  color:#ff0000;
+  
+}
 
 button {
   background-color: #ff0000;
