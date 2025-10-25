@@ -229,8 +229,9 @@ footer {
     line-height: 150%;
     text-align: center;
     display: block;
-  color:#ff0000;
-  text-shadow:
+   color:#ff0000;
+   justify-content: center;
+   text-shadow:
       0 0 7px var(--rouge-secondaire),
       0 0 10px var(--rouge-secondaire),
       0 0 21px var(--rouge-secondaire),
@@ -239,5 +240,5 @@ footer {
       0 0 92px var(--violet-secondaire),
       0 0 102px var(--violet-primaire),
       0 0 151px var(--violet-primaire);
-   padding: 2%;
+    padding: 2%;
 }
