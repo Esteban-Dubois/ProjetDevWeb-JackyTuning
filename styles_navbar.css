@@ -68,6 +68,8 @@ header {
     align-items: center;
     justify-content: center;
     text-decoration: none; 
+    position: relative;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .page-actuelle {
@@ -79,9 +81,29 @@ header {
     margin: 0 4%;
     align-items: center;
     justify-content: center;
-    text-decoration: none; 
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .page:hover, .page-actuelle:hover {
     box-shadow: 2px 2px 2px var(--rouge-secondaire);
+    transform: skewX(-15deg);
+}
+
+.page::after,
+.page-actuelle::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; 
+    background-color: var(--rouge-secondaire); 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-out;
+}
+
+.page:hover::after,
+.page-actuelle:hover::after {
+    width: 100%;
 }
