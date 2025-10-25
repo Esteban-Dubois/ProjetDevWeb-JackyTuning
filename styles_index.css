@@ -531,6 +531,126 @@ Zone Info 2
 --------------------------------*/
 
 .zone-info-2 {
+   padding-top: 3%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--primaire);
+   padding-bottom: 4%;
+}
+
+/*-----Titre Glitch 2-----*/
+
+.div-glitch2 {
+   margin: 5% 10%;
+   width: 80%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   background-color: var(--primaire);
+}
+
+.glitch2 {
+   position: relative;
+   font-size: 40px;
+   font-weight: bold;
+   color: var(--white);
+   letter-spacing: 3px;
+   z-index: 1;
+}
+
+.glitch2:before,
+.glitch2:after {
+   display: block;
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0.8;
+}
+
+.glitch2:before {
+   animation: glitch2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+   color: var(--violet-secondaire);
+   z-index: -1;
+}
+
+.glitch2:after {
+   animation: glitch2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+   color: var(--rouge-secondaire);
+   z-index: -2;
+}
+
+@keyframes glitch2 {
+   0% {
+      transform: translate(0);
+   }
+   20% {
+      transform: translate(-2px, 2px);
+   }
+   40% {
+      transform: translate(-2px, -2px);
+   }
+   60% {
+      transform: translate(2px, 2px);
+   }
+   80% {
+      transform: translate(2px, -2px);
+   }
+   to {
+      transform: translate(0);
+   }
+}
+
+/*-----Carousel 3-----*/
+
+.div-carousel3 {
+   width: 100%;
+   height: 30vh;
+   overflow: hidden; 
+   position: relative; 
+}
+
+.carousel3-infini {
+    display: flex; 
+    width: min-content; 
+    animation: rotation-carousel2 45s infinite linear;
+    height: 100%;
+}
+
+.groupe {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 80px;
+   flex-shrink: 0; 
+   height: 100%;
+   padding-right: 80px;
+   box-sizing: border-box;
+}
+
+.div-carousel3::-webkit-scrollbar {
+   display: none;
+}
+
+.element-carousel3 {
+   flex: 0 0 300px; 
+   height: 100%;
+   align-content: center;
+   filter: invert(1) brightness(2);
+}
+
+.element-carousel3-2 {
+   width: 100px;
+   align-content: center;
+}
+
+/*--------------------------------
+Zone Info 3
+--------------------------------*/
+
+.zone-info-3 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -608,5 +728,4 @@ Zone Info 2
 .i3 {
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
-
 }
