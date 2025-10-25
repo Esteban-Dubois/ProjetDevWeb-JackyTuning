@@ -550,7 +550,7 @@ Zone Info 2
 .carousel2-infini {
     display: flex; 
     width: min-content; 
-    animation: rotation-carousel2 5s infinite linear;
+    animation: rotation-carousel2 10s infinite linear;
     height: 100%;
 }
 
@@ -608,4 +608,5 @@ Zone Info 2
 .i3 {
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
+
 }
