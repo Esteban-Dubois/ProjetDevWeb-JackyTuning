@@ -649,9 +649,8 @@ Zone Info 2
 Transition Info 2 - Info 3
 --------------------------------*/
 
-#background-video2 {
+#transition-zone1-2{
    width: 100%;
-   height:100vh;
    object-fit : cover;
 }
 
@@ -738,4 +737,5 @@ Zone Info 3
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
 }
+
 
