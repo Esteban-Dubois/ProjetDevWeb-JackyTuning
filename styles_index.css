@@ -68,7 +68,7 @@ Première Zone d'Information
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--primaire);
+    background-color: var(--secondaire);
     padding-bottom: 4%;
 }
 
@@ -113,7 +113,7 @@ Première Zone d'Information
    left: 2px;
    width: 100%;
    color: 30px;
-   background-color: var(--primaire);
+   background-color: var(--secondaire);
    overflow: hidden;
    clip: rect(0, 900px, 0, 0);
    animation: noise-after 2s infinite linear alternate-reverse;
@@ -535,7 +535,7 @@ Zone Info 2
    width: 100%;
    display: flex;
    flex-direction: column;
-   background-color: var(--primaire);
+   background-color: var(--secondaire);
    padding-bottom: 4%;
 }
 
@@ -543,12 +543,12 @@ Zone Info 2
 
 .div-glitch2 {
    margin: 5% 10%;
-   width: 80%;
+   width: 40%;
    height: 100%;
    display: flex;
    align-items: center;
    text-align: center;
-   background-color: var(--primaire);
+   background-color: var(--secondaire);
 }
 
 .glitch2 {
@@ -645,13 +645,136 @@ Zone Info 2
    width: 100px;
    align-content: center;
 }
+
 /*--------------------------------
 Transition Info 2 - Info 3
 --------------------------------*/
 
-#transition-zone1-2{
-   width: 100%;
-   object-fit : cover;
+.zone-transition {
+    position: relative;
+    padding: 4% 0;
+    overflow: hidden;
+}
+
+#transition-zone1-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+
+/*-----Carousel Avis Droite-----*/
+
+.carousel-avis-droite {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.carousel-avis-droite-infini {
+    display: flex; 
+    width: min-content; 
+    animation: rotation-carousel-avis-droite 70s infinite linear;
+    height: 100%;
+}
+
+.groupe-avis {
+   display: flex;
+   gap: 80px;
+   align-items: center;
+   flex-shrink: 0; 
+   height: 100%;
+   padding-right: 80px;
+   box-sizing: border-box;
+}
+
+.carousel-avis-droite::-webkit-scrollbar {
+   display: none;
+}
+
+@keyframes rotation-carousel-avis-droite {
+   from {
+      transform: translateX(-50%);
+   }
+   to {
+      transform: translateX(0);
+   }
+}
+
+/*-----Carousel Avis Gauche-----*/
+
+.carousel-avis-gauche {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.carousel-avis-gauche-infini {
+    display: flex; 
+    width: min-content; 
+    animation: rotation-carousel-avis-gauche 70s infinite linear;
+    height: 100%;
+}
+
+.groupe-avis {
+   display: flex;
+   gap: 80px;
+   align-items: center;
+   flex-shrink: 0; 
+   height: 100%;
+   padding-right: 80px;
+   box-sizing: border-box;
+}
+
+.carousel-avis-gauche::-webkit-scrollbar {
+   display: none;
+}
+
+@keyframes rotation-carousel-avis-gauche {
+   from {
+       transform: translateX(0);
+   }
+   to {
+       transform: translateX(-50%);
+   }
+}
+
+/*-----Avis-----*/
+
+.div-avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--tertiaire);
+    border-radius: 15px;
+    width: 450px;
+    min-height: 220px; 
+    color: var(--white);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.nom-utilisateur {
+   text-shadow: 1px 1px 1px var(--violet-primaire);
+   font-size: 20px;
+   font-family: "nsj-b", serif;
+}
+
+.note {
+   display: flex;
+   justify-content: space-between;
+}
+
+.etoile {
+   display: flex;
 }
 
 /*--------------------------------
@@ -662,7 +785,7 @@ Zone Info 3
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--primaire);
+    background-color: var(--secondaire);
     padding-bottom: 4%;
 }
 
@@ -703,10 +826,11 @@ Zone Info 3
    font-size: 25px;
    border-radius: 15px;
    text-align: center;
-   align-content: center;
    margin-bottom: 1%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-
 .element-carousel2:hover {
    box-shadow: 3px 3px 3px var(--rouge-secondaire);
 }
@@ -737,5 +861,3 @@ Zone Info 3
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
 }
-
-
