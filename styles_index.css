@@ -9,11 +9,6 @@
 }
 
 @font-face {
-    font-family: "bpsi";
-    src: url(polices/Bitcount_Prop_Single_Ink/BitcountPropSingleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf);
-}
-
-@font-face {
     font-family: "bbh";
     src: url(polices/BBHSansBogle-Regular.ttf);
 }
@@ -778,6 +773,153 @@ Transition Info 2 - Info 3
 }
 
 /*--------------------------------
+Zone Rassemblement
+--------------------------------*/
+
+.zone-ou {
+   width: 100%;
+   background-image: url(images_index/fond-rassemblement.png);
+}
+
+.div-zone-ou {
+   width: 80%;
+   margin: 0 10%;
+   padding: 3% 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.ligne1 , .ligne2 , .ligne3 {
+   display: flex;
+   width: 80%;
+   height: 200px;
+}
+
+.ligne1 {
+   margin-left: 20%;
+}
+
+.div-e-ligne1 , .div-e-ligne2 , .div-e-ligne3{
+   width: 25%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   border-radius: 15px;
+}
+
+.div-e-ligne1, .div-e-ligne2 {
+   margin-left: 25%;
+}
+
+.div-e-ligne3 {
+   margin-right: 25%;
+}
+
+.texte-ou {
+   display: flex;
+   justify-content: space-between;
+   padding: 3px;
+   color: var(--white);
+   font-family: "nsj-b", serif;
+   text-shadow: 2px 2px 2px var(--violet-primaire);
+   background-color: var(--primaire);
+   border-radius: 15px 15px 0 0;
+}
+
+.img-ou {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   border-radius: 0px 0px 15px 15px;
+}
+
+.div-e-ligne2-2 {
+   width: 25%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-left: 25%;
+   
+}
+
+.titre-neon-2 {
+   background-image: url(images_index/fond-titre.jpg);
+   background-position: center; 
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-align: center;
+   border-radius: 15px;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   font-size: 20px;
+   color: var(--white);
+   text-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-primaire),
+      0 0 151px var(--violet-primaire);
+   padding: 2%;
+   box-sizing: border-box;
+   align-items: center;
+}
+
+@keyframes animation-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.div-e-ligne1,
+.div-e-ligne2,
+.div-e-ligne3,
+.div-e-ligne2-2 {
+  position: relative;
+  z-index: 1;
+  border: none !important; 
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.div-e-ligne1::before,
+.div-e-ligne2::before,
+.div-e-ligne3::before,
+.div-e-ligne2-2::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    90deg, 
+    var(--violet-secondaire), 
+    var(--rouge-primaire), 
+    var(--violet-secondaire)
+  );
+  background-size: 200% auto;
+  animation: animation-border 3s linear infinite;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.div-e-ligne1:hover,
+.div-e-ligne2:hover,
+.div-e-ligne3:hover,
+.div-e-ligne2-2:hover {
+  transform: skewX(-15deg);
+}
+
+/*--------------------------------
 Zone Info 3
 --------------------------------*/
 
@@ -837,6 +979,7 @@ Zone Info 3
 
 .element-carousel2 a {
    text-decoration: none;
+   width: 100%;
 }
 
 @keyframes rotation-carousel2 {
@@ -860,4 +1003,22 @@ Zone Info 3
 .i3 {
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
+}
+
+.titre-neon3 {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+   color: var(--white);
+   text-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-primaire),
+      0 0 151px var(--violet-primaire);
+   padding: 2%;
 }
