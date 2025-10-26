@@ -798,17 +798,18 @@ input{
     opacity: 0.5;
 }
 
-.blockhover-left:hover + .formulair{
+.blockhover-left:hover ~ .formulair{
     scale: 120%;
     width: 80%;
     transform: translateX(30%);
 }
 
-.blockhover-left:hover + .questionnaire{
+.blockhover-left:hover ~ .questionnaire{
     scale: 30%;
     transform: translateX(50%);
     opacity: 0.5;
 }
+
 
 
 
