@@ -51,7 +51,7 @@ html, body {
     object-fit : cover;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .video-accueil{
       height: 70vh;
    }
@@ -125,7 +125,7 @@ Première Zone d'Information
    font-family: "bbh",serif;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .glitch {
       font-size: 40px;
    }
@@ -326,7 +326,7 @@ Première Zone d'Information
     text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .zone-texte{
       width: 90%;
       margin: 5%;
@@ -423,7 +423,7 @@ Première Zone d'Information
    }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    @keyframes voiture-gauche-droite {
    0% {
          left: 6%;
@@ -589,7 +589,7 @@ Zone Carousel
    right: 15px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .titre-neon {
       font-size: 25px;
    }
@@ -688,7 +688,7 @@ Zone Info 2
    }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .glitch2 {
       font-size: 30px;
    }
@@ -741,7 +741,7 @@ Zone Info 2
    align-content: center;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .element-carousel3 {
       flex: 0 0 200px;
    }
@@ -882,7 +882,7 @@ Transition Info 2 - Info 3
    display: flex;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .nom-utilisateur {
       font-size: 25px;
    }
@@ -1047,7 +1047,7 @@ Zone Rassemblement
   transform: skewX(-15deg);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .div-zone-ou {
       width: 90%;
       margin: 0 5%;
@@ -1151,7 +1151,7 @@ Zone Info 3
    width: 100%;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
    .div-carousel2 {
       height: 15vh;
    }
