@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "nsj";
     src: url(polices/NotoSansJP-Regular.ttf);
@@ -809,7 +810,6 @@ input{
     transform: translateX(50%);
     opacity: 0.5;
 }
-
 
 
 
