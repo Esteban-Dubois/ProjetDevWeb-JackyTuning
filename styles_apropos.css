@@ -29,7 +29,7 @@
     --rouge-primaire: #EB3B5A;
     --rouge-secondaire: #FC5C65;
 
-    --loaddelay: 0.2s; /* valeur de base : 5s*/
+    --loaddelay: 5s; /* valeur de base : 5s*/
 
     --white:#ffffff;
 
@@ -41,6 +41,18 @@
 
 html, body {
     height: 0%;
+    scroll-behavior: smooth;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .section01{
@@ -63,7 +75,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column; /* empile .load et .progress-bar verticalement */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     animation-duration: var(--loaddelay);
@@ -142,7 +154,7 @@ html, body {
     
     border-radius: 60px;
     overflow: hidden;
-    width: 350%; /* fixe une taille propre à la barre */
+    width: 350%;
     background: rgb(94, 94, 94);
     opacity: 0;
     animation: despawn var(--loaddelay) ease forwards;
@@ -440,6 +452,8 @@ html, body {
 /*=================SECTION 02=================!*/
 
 
+
+
 .section02{
     display: flex;
     flex-direction: column;
@@ -457,6 +471,9 @@ html, body {
     margin: 2%;
     padding: 0.1%;
     gap: 3%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
     transition: all 0.5s ease;
 
     display: flex;
@@ -464,6 +481,7 @@ html, body {
     flex-direction: row;
     justify-content: center;
     width: 90%
+
 }
 
 .story_ligne01:hover, .story_ligne02:hover{
@@ -560,6 +578,7 @@ html, body {
     scale: 102%;
     z-index: -1;
     opacity: 1;
+    
 }
 
 .section03{
@@ -587,7 +606,27 @@ html, body {
     border-radius: 8px;
     width: 50%;
     height: auto;
+
+    transition: all 0.5s ease;
 }
+
+.formulair:hover{
+    scale: 120%;
+    width: 80%;
+    transform: translateX(30%);
+}
+
+.formulair:hover + .questionnaire{
+    scale: 30%;
+    transform: translateX(50%);
+    opacity: 0.5;
+}
+
+.formulair:hover + .questionnaire p{
+    
+    font-size: clamp(0.2rem, 1vw, 0.4rem);
+}
+
 
 input{
     width: 80%;
@@ -711,6 +750,17 @@ input{
     border-radius: 8px;
     width: 50%;
     height: auto;
+
+    transition: all 0.5s ease;
+}
+
+.blockhover-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
 }
 
 .ligne_q0 h2{
@@ -731,10 +781,38 @@ input{
     margin-bottom: 3%;
 }
 
-#ligne_q label{
+.questionnaire div label{
     font-family: "bpsi", serif;
     font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
+
+.formulair:hover{
+    scale: 120%;
+    width: 80%;
+    transform: translateX(30%);
+}
+
+.formulair:hover + .questionnaire{
+    scale: 30%;
+    transform: translateX(50%);
+    opacity: 0.5;
+}
+
+.blockhover-left:hover + .formulair{
+    scale: 120%;
+    width: 80%;
+    transform: translateX(30%);
+}
+
+.blockhover-left:hover + .questionnaire{
+    scale: 30%;
+    transform: translateX(50%);
+    opacity: 0.5;
+}
+
+
+
+
 
 .soumettre{
     background-color: var(--violet-primaire);
@@ -761,8 +839,52 @@ input{
     }
 
     .formulair, .questionnaire {
-        width: 90%;
+        width: initial;
     }
+
+    .formulair:hover{
+    scale: initial;
+    width: initial;
+    transform: none;
+}
+.questionnaire{
+    width: 75%;
+}
+
+.formulair:hover + .questionnaire{
+    scale: initial;
+    transform: none;
+    opacity: initial;
+}
+
+.blockhover-left:hover + .formulair{
+    scale: initial;
+    width: initial;
+    transform: none;
+}
+
+.blockhover-left:hover + .questionnaire{
+    scale: initial;
+    transform: none;
+    opacity: initial;
+}
+
+.formulair:hover{
+    scale: initial;
+    width: initial;
+    transform: none;
+}
+
+.formulair:hover + .questionnaire{
+    scale: initial;
+    transform: none;
+    opacity: initial;
+}
+
+.formulair:hover + .questionnaire p{
+    
+    font-size: initial;
+}
 
 }
 
