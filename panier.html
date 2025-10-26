@@ -21,7 +21,6 @@
         </div>
     </header>
 
-    <a href="prblm.html" class="register">Signaler un problème</a>
     <div class="anim_nav_b">
         <img src="v_c_j.png" alt="" class="anim">
     </div>
@@ -29,161 +28,97 @@
         <img src="v_j.png" alt="" class="anim">
     </div>
 
+
     <div class="panier">
+
+        <input type="checkbox" id="toggle" class="a_c">
+        <label for="toggle" class="bouton-toggle b_a_c">Affichage classique</label>
+
         <div class="l l-1">
+            
+            <input type="radio" id="toggle-a" name="choix-tuning" class="t_a">
+            <label for="toggle-a" class="bouton-toggle button_a">Jantes rouges</label>
 
-            <div class="tuning h_g">
-                <img src="v_c_b.png" alt="">
-                <div class="nom_prix">
+            <div class="tuning a">
+                <img src="jante_allu_rouge_20.png" alt="">
+                <div class="description">
                     <p class="nom">voiture</p>
+                </div>
+                <div class="buy_del">
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <input type="number" min="1" max="10" value="1" step="1" class="nombre">
+                        <button class="plus">+</button>
+                    </div>
                     <p class="prix">500 €</p>
+                    <p class="del">Supprimer</p>
+                </div>
+            </div>
+            
+            <input type="radio" id="toggle-b" name="choix-tuning" class="t_b">
+            <label for="toggle-b" class="bouton-toggle button_b">LED</label>
+
+            <div class="tuning b">
+                <img src="phare_LED.png" alt="">
+                <div class="description">
+                    <p class="nom">voiture</p>
                 </div>
                 <div class="buy_del">
-                    <p class="del">Supprimer</p>
                     <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
+                        <button class="moins">-</button>
+                        <input type="number" min="1" max="10" value="1" step="1" class="nombre">
+                        <button class="plus">+</button>
                     </div>
+                    <p class="prix">500 €</p>
+                    <p class="del">Supprimer</p>
                 </div>
             </div>
 
-            <div class="tuning h_m">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
+            <input type="radio" id="toggle-c" name="choix-tuning" class="t_c">
+            <label for="toggle-c" class="bouton-toggle button_c">Peinture chrome</label>
+
+            <div class="tuning c">
+                <img src="voiture_chrome_sans_fond.png" alt="" class="v_chrome">
+                <div class="description">
                     <p class="nom">voiture</p>
-                    <p class="prix">750 €</p>
                 </div>
                 <div class="buy_del">
-                    <p class="del">Supprimer</p>
                     <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
+                        <button class="moins">-</button>
+                        <input type="number" min="1" max="10" value="1" step="1" class="nombre">
+                        <button class="plus">+</button>
                     </div>
-                </div>
-            </div>
-
-            <div class="tuning h_d">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">22.99 €</p>
-                </div>
-               <div class="buy_del">
+                    <p class="prix">500 €</p>
                     <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="l l-2">
-
-            <div class="tuning m_g">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">10 000 €</p>
-                </div>
-                <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
+        <div class="recap">
+            <div class="r_panier">
+                <p>Panier (3)</p>
+                <p>500 €</p>
             </div>
-
-            <div class="tuning m_m">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">0.99 €</p>
-                </div>
-                <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
+            <div class="livraison">
+                <p>Frais de livraisons</p>
+                <p>24.99 €</p>
             </div>
-
-            <div class="tuning m_d">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">5 000 €</p>
-                </div>
-                <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
+            <div class="total">
+                <h2>Total</h2>
+                <h2>1500 €</h2>
+            </div>
+            <div class="paiement">
+                <button>Procéder à l'achat</button>
             </div>
         </div>
 
-        <div class="l l-3">
-
-            <div class="tuning b_g">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">50 €</p>
-                </div>
-                <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tuning b_m">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">95 €</p>
-                </div>
-               <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tuning b_d">
-                <img src="v_c_b.png" alt="">
-                 <div class="nom_prix">
-                    <p class="nom">voiture</p>
-                    <p class="prix">3.33 €</p>
-                </div>
-                <div class="buy_del">
-                    <p class="del">Supprimer</p>
-                    <div class="quantite">
-                        <button class="moins" id="moins">-</button>
-                        <input type="number" min="1" max="10" value="1" step="1" class="nombre" id="nombre">
-                        <button class="plus" id="plus">+</button>
-                    </div>
-                </div>
-            </div>
+        <div class="garage">
+            <img src="garage.png" alt="">
         </div>
+
+
+
     </div>
-
     <footer>
         <div class="footer-col">
             <b>Nos Pages</b>
@@ -210,21 +145,80 @@
             <p>Erwan Erny</p>
         </div>
     </footer>
-    
+
     <script>
+        
+        const articlesPanier = document.querySelectorAll('.tuning');
 
-  const nombre = document.getElementById('nombre');
-  const plus = document.getElementById('plus');
-  const moins = document.getElementById('moins');
+        articlesPanier.forEach(article => {
+            const nombre = article.querySelector('.nombre');
+            const plus = article.querySelector('.plus');
+            const moins = article.querySelector('.moins');
 
-  plus.addEventListener('click', () => {
-    nombre.value = parseInt(nombre.value) + 1;
-  });
+            if (plus) {
+                plus.addEventListener('click', () => {
+                    let valeur = parseInt(nombre.value);
+                    if (valeur < 10) {
+                        nombre.value = valeur + 1;
+                    }
+                });
+            }
 
-  moins.addEventListener('click', () => {
-    nombre.value = Math.max(0, parseInt(nombre.value) - 1);
-  });
-</script>
+            if (moins) {
+                moins.addEventListener('click', () => {
+                    let valeur = parseInt(nombre.value);
+                    if (valeur > 1) {
+                        nombre.value = valeur - 1;
+                    }
+                });
+            }
+        });
+
+
+        
+        
+        
+        const checkboxClassique = document.getElementById('toggle');
+        const radiosArticle = document.querySelectorAll('input[name="choix-tuning"]');
+        const labelsArticle = [
+            document.querySelector('.button_a'),
+            document.querySelector('.button_b'),
+            document.querySelector('.button_c')
+        ];
+
+       
+        checkboxClassique.addEventListener('change', function() {
+            if (this.checked) {
+               
+                
+               
+                radiosArticle.forEach(radio => {
+                    radio.checked = false; 
+                    radio.disabled = true; 
+                });
+                
+           
+                labelsArticle.forEach(label => {
+                    label.style.pointerEvents = 'none'; 
+                    label.style.opacity = '0';      
+                });
+
+            } else {
+                
+                
+                
+                radiosArticle.forEach(radio => {
+                    radio.disabled = false; 
+                });
+                
+                // On restaure les labels
+                labelsArticle.forEach(label => {
+                    label.style.pointerEvents = 'auto'; 
+                    label.style.opacity = '1';        
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
