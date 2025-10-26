@@ -52,12 +52,19 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
-   .video-accueil{
+   .video-accueil {
       height: 70vh;
+      width: 100%; 
+      overflow: hidden; 
    }
 
    #background-video {
       height: 70vh;
+      width: 100vw;
+      object-fit: cover;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
    }
 }
 
@@ -600,14 +607,21 @@ Zone Carousel
 
    .fleche-droite , .fleche-gauche {
       padding: 50px 20px;
+      margin-top: 50px;
    }
 
    .fleche-gauche {
-      left: 8px;
+      left: 4px;
    }
 
    .fleche-droite {
-      right: 8px;
+      right: 4px;
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .fleche-droite , .fleche-gauche {
+      padding: 35px 0;
    }
 }
 
@@ -748,6 +762,16 @@ Zone Info 2
 
    .element-carousel3-2 {
       flex: 0 0 100px;
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .element-carousel3 {
+      flex: 0 0 150px;
+   }
+
+   .element-carousel3-2 {
+      flex: 0 0 75px;
    }
 }
 
@@ -1048,44 +1072,59 @@ Zone Rassemblement
 }
 
 @media screen and (max-width: 768px) {
-   .div-zone-ou {
-      width: 90%;
-      margin: 0 5%;
-      padding: 5% 0;
-   }
+.div-zone-ou {
+   width: 90%;
+   margin: 0 5%;
+   padding: 3% 0;
+   display: flex;
+   flex-direction: column;
+}
 
-   .ligne1 , .ligne2 , .ligne3 {
-      width: 90%;
-      margin-bottom: 3%;
-   }
+.ligne1 , .ligne2 , .ligne3 {
+   display: flex;
+   width: 90%;
+   height: 200px;
+   margin-bottom: 5%;
+}
 
-   .ligne1 {
-      margin-left: 10%;
-   }
+.ligne1 {
+   margin-left :5%;
+}
 
-   .div-e-ligne1 , .div-e-ligne2 , .div-e-ligne3{
-      width: 30%;
-   }
+.div-e-ligne1 , .div-e-ligne2 , .div-e-ligne3{
+   width: 45%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   border-radius: 15px;
+}
 
-   .div-e-ligne1, .div-e-ligne2 {
-      margin-left: 15%;
-   }
+.div-e-ligne1 , .div-e-ligne2 {
+   margin-left: 5%;
+}
 
-   .div-e-ligne2-2 {
-      width: 30%;
-      margin-left: 15%;
-   }
+.div-e-ligne3 {
+   margin-right: 5%;
+}
 
-   .div-e-ligne3 {
-      margin-right: 15%;
-   }
+.texte-ou {
+   display: flex;
+   flex-direction: column;
+}
 
-   .ligne3 {
-      margin-left: 5%;
-   }
+.div-e-ligne2-2 {
+   width: 45%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-left: 5%;
+   
+}
+}
 
-   .texte-ou {
-      flex-direction: column;
+@media screen and (max-width: 425px) {
+   .titre-neon-2 {
+      font-size: 14px;
    }
 }
 
