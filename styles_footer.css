@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "nsj";
+    src: url(polices/NotoSansJP-Regular.ttf);
+}
+
+@font-face {
+    font-family: "nsj-b";
+    src: url(polices/NotoSansJP-Black.ttf);
+}
+
+@font-face {
+    font-family: "bbh";
+    src: url(polices/BBHSansBogle-Regular.ttf);
+}
+
+* {
+    --primaire:#212140; 
+    --secondaire: #2c2c54;
+    --tertiaire: #40407a;
+
+    --violet-primaire: #8854D0;
+    --violet-secondaire: #A55EEA;
+
+    --rouge-primaire: #EB3B5A;
+    --rouge-secondaire: #FC5C65;
+
+    --white:#ffffff;
+
+    margin: 0;
+    padding: 0;
+    font-family: "nsj", serif;
+    font-size: 16px;
+}
+
+footer {
+    background-color: var(--primaire);
+    padding: 3% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col>b {
+    font-family: "nsj-b", serif;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.footer-col>a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-col>p {
+    color: var(--white);
+}
+
+.ligne-footer {
+    margin: 5% 0;
+    width: 70%;
+    height: 3px;
+    background-color: var(--white);
+    box-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-secondaire),
+      0 0 151px var(--violet-secondaire);
+}
