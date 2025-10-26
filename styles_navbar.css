@@ -116,3 +116,16 @@ header {
         left: 10%;
     }
 }
+
+@media screen and (max-width: 425px) {
+    header {
+        width: 96%;
+        height: 15%;
+        left: 2%;
+    }
+
+    .page-actuelle , .page {
+        width: 23%;
+        margin: 0 1%;
+    }
+}
