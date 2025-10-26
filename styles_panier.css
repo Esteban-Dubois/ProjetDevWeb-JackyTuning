@@ -93,73 +93,7 @@
 body {
   background-color: var(--secondaire);
 }
-/*   haut */
 
-.h_m{
-  position: relative;
-  top: 35vh;
-  scale: 0;
-  animation-name: a_h_m;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes a_h_m {
-  from{scale: 0;top: 35vh;}
-  to{scale: 1;top: 0;}
-}
-/* bas */
-.b_m{
-  position: relative;
-  bottom: 35vh;
-  scale: 0;
-  animation-name: a_b_m;
-  animation-duration: 1s;
-  animation-delay: 1000ms;
-  animation-fill-mode: forwards;
-}
-@keyframes a_b_m {
-  from{scale: 0;bottom: 35vh;}
-  to{scale: 1;bottom: 0;}
-}
-/* gauche */
-.m_g{
-  position: relative;
-  left: 50vh;
-  scale: 0;
-  animation-name: a_m_g;
-  animation-duration: 1s;
-  animation-delay: 1500ms;
-  animation-fill-mode: forwards;
-}
-@keyframes a_m_g {
-  from{scale: 0;left: 50vh;}
-  to{scale: 1;left: 0;}
-}
-/* droite */
-.m_d{
-  position: relative;
-  right: 50vh;
-  scale: 0;
-  animation-name: a_m_d;
-  animation-duration: 1s;
-  animation-delay: 500ms;
-  animation-fill-mode: forwards;
-}
-@keyframes a_m_d {
-  from{scale: 0;right: 50vh;}
-  to{scale: 1;right: 0;}
-}
-.m_m{
-  scale: 0;
-  animation-name: a_m_m;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-@keyframes a_m_m {
-  from{scale: 0;}
-  to{scale: 1;}
-}
 
 @keyframes a_app_r {
   0% {opacity: 100%; left: 100%; }
@@ -177,59 +111,64 @@ body {
 
 .panier{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 15%;
-  margin-top: 15%;
+  margin-top: 10%;
 
 }
 .l{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  margin: 2% 0;
+  margin: 5% 0 0 5%;
+  width: 55%;
+
 }
 .tuning{
-  height: 5%;
-  width: 15%;
+  height: auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  background-color: #40407a;
-  border: 1px solid #8854D0;
-  backdrop-filter: blur(50px);
+  flex-direction: row;
+  background-color: #40407a71;
+  border: 1px solid #8854d0;
   border-radius: 15px;
   padding: 1%;
-  margin: 0 5%;
+  margin: 2% 2%;
+  justify-content: space-between;
+
 }
 .tuning>img{
   height: auto;
-  width: 80%;
+  width: 15%;
 }
-.buy_del, .nom_prix{
+.buy_del, .description{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 10px;
   justify-content: space-between;
+  width: 15%;
 }
-.nom_prix{
-  margin-bottom: 5%;
+.description{
+  width: 80%;
   border-radius: 10px;
-  background-color:#A55EEA;
+  background-color:#a45eea11;
   
 }
+
 .nom{
-  background-color:#8854D0;
-  border-radius: 10px 60px 0 10px;
   padding: 2%;
   width: 40%;
 }
 .prix{
   background-color:#8854D0;
-  border-radius: 0 10px 10px 60px;
+  box-shadow: 0 0 10px #A55EEA;
+  border-radius: 10px;
   padding: 2%;
   width: 40%;
-  text-align: right;
+  text-align: center;
+  margin-left: 30%;
 }
 .del{
   background-color: var(--rouge-secondaire);
@@ -241,16 +180,7 @@ body {
   padding: 2%;
   border-radius: 10px;
 }
-.register{
-  background-color: #8854D0;
-  border-radius: 5px;
-  float: right;
-  position: fixed;
-  top: 4%;
-  left: 85%;
-  padding: 0.5%;
 
-}
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -278,10 +208,10 @@ input[type=number] {
 .quantite{
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 100%;
   background-color: #212140;
   border-radius: 10px;
-  justify-content: right;
+  justify-content: left;
 
 }
 .plus:active, .moins:active{
@@ -292,4 +222,271 @@ input[type=number] {
 }
 .del:hover{
   cursor: wait;
+}
+.recap{
+  display: flex;
+  flex-direction: column;
+  background-color: #40407a;
+  border: 1px solid #8854D0;
+  box-shadow: 0 0 10px #A55EEA;
+  margin: 10% 5% 0 0 ;
+  border-radius: 10px;
+  padding: 5px;
+  width: 15%;
+  height: 100%;
+}
+.total, .livraison, .r_panier{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.paiement{
+  width: 100%;
+  text-align: center;
+}
+.total>h2{
+  font-size: 140%;
+}
+.r_panier, .livraison, .total{
+  padding: 5% 0;
+}
+.v_chrome{
+  margin: 3% 0;
+}
+
+.garage{
+  width: 70%;
+  height: auto;
+  position: absolute;
+  margin-left: 1%;
+  z-index: -1;
+  visibility: visible;
+}
+.garage>img{
+  width: 100%;
+  height: auto;
+  visibility: visible;
+}
+.t_c{
+  position: absolute;
+  top: 10%;
+  display: none; 
+}
+.t_c:checked ~ .c{
+  
+  flex-direction: column;
+  scale: 1;
+  transition: 0.5s;
+  width: 10%;
+  top: 40%;
+  left: 5%;
+  backdrop-filter: blur(20px);
+  position: absolute;
+
+  img{
+    width: 100%;
+  }
+  .buy_del{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .nombre{
+    width: 80%;
+
+  }
+  
+  .quantite{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+  .del{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+
+
+  
+}
+.c{
+  z-index: 2;
+  scale: 0;
+  top: 50%;
+}
+
+
+.bouton-toggle {
+  display: inline-block;
+  background-color: var(--violet-secondaire);
+  box-shadow: 0 0 10px var(--violet-secondaire);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  
+  width: 20%; 
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bouton-toggle:hover {
+  background-color: var(--violet-primaire);
+}
+
+.t_b{
+  position: absolute;
+  display: none; 
+}
+.button_a{
+  bottom: 65%;
+  left: 55%;
+  position: absolute;
+  width: 10%;
+}
+.button_b{
+  bottom: 65%;
+  left: 31%;
+  position: absolute;
+  width: 10%;
+}
+.button_c{
+  bottom: 60%;
+  left: 8%;
+  position: absolute;
+  width: 10%;
+}
+.t_b:checked ~ .b{
+  
+  flex-direction: column;
+  scale: 1;
+  transition: 0.5s;
+  width: 10%;
+  top: 35%;
+  left: 28%;
+  position: absolute;
+  backdrop-filter: blur(20px);
+
+  img{
+    width: 100%;
+  }
+  .buy_del{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .nombre{
+    width: 80%;
+
+  }
+  
+  .quantite{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+  .del{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+
+
+  
+}
+.b{
+  z-index: 2;
+  scale: 0;
+  top: 50%;
+}
+
+
+.t_a{
+  position: absolute;
+  display: none; 
+}
+
+
+.t_a:checked ~ .a{
+  
+  flex-direction: column;
+  scale: 1;
+  transition: 0.5s;
+  width: 10%;
+  top: 35%;
+  left: 52%;
+  backdrop-filter: blur(20px);
+  position: absolute;
+
+  img{
+    width: 100%;
+  }
+  .buy_del{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .nombre{
+    width: 80%;
+
+  }
+  
+  .quantite{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+  .del{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+
+
+  
+}
+.a{
+  z-index: 2;
+  scale: 0;
+  top: 50%;
+}
+
+.a_c{
+  display: none;
+}
+.a_c:checked ~ .b, .a_c:checked ~ .a, .a_c:checked ~ .c, .a_c:checked ~ .garage{
+  opacity: 0%;
+}
+
+
+
+.a_c{
+  display: none;
+}
+
+
+.a_c:checked ~ .garage {
+  opacity: 0%;
+  visibility: hidden; 
+  transition: opacity 0.5s ease; 
+}
+
+.b_a_c {
+    position: absolute;
+    top: 15%; 
+    left: 45%; 
+    z-index: 10;
+}
+.a_c:checked ~ .l-1{
+  label{
+    opacity: 0;
+  }
+  .l{
+    flex-direction: column;
+    display: flex;
+    position:unset;
+
+  }
+  .a, .b , .c{
+    scale: 1;
+  }
+}
+footer{
+  margin-top: 15%;
 }
