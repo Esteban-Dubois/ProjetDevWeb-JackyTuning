@@ -18,7 +18,8 @@
     src: url(polices/BBHSansBogle-Regular.ttf);
 }
 
-* {
+* { 
+    --darkeur: #1f1f3f;
     --primaire: #2c2c54;
     --secondaire: #40407a;
 
@@ -28,7 +29,7 @@
     --rouge-primaire: #EB3B5A;
     --rouge-secondaire: #FC5C65;
 
-    --loaddelay: 5s; /* valeur de base : 5s*/
+    --loaddelay: 0.2s; /* valeur de base : 5s*/
 
     --white:#ffffff;
 
@@ -344,6 +345,8 @@ html, body {
 }
 
 .continuer{
+    display: block;
+    margin: 5% auto;
     z-index: 6;
     background-color: transparent;
     backdrop-filter: blur(0px);
@@ -402,6 +405,38 @@ html, body {
     width: 100%;
 }
 
+
+.transition{
+    background-color: var(--darkeur);
+    height: calc(3.5vw);
+    width: 100%;
+    z-index: 3;
+}
+
+
+@media screen and (max-width: 780px) {
+
+    .h1_title-part1, .h1_title-part2{
+        font-size: 250%;
+    }
+    .content01>p{
+        font-size: 150%;
+    }
+
+    .continuer{
+        width: 70%;
+    }
+
+    .continuer:hover{
+    background-color: rgba(178, 99, 231, 0.3);
+    backdrop-filter: blur(20px);
+    width: 85%;
+    padding: 3.5%;
+    cursor: pointer;
+}
+
+}
+
 /*=================SECTION 02=================!*/
 
 
@@ -413,22 +448,34 @@ html, body {
     position: relative;
     background-color: var(--secondaire);
     height: auto;
+    min-height: 1050px;
     width: 100%;
 
 }
 
-.story_ligne01{
+.story_ligne01, .story_ligne02{
     margin: 2%;
     padding: 0.1%;
     gap: 3%;
+    transition: all 0.5s ease;
 
     display: flex;
     align-items: stretch;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     width: 90%
 }
 
+.story_ligne01:hover, .story_ligne02:hover{
+    width: 96%;
+}
+.story_ligne01:hover .story_text p{
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+
+}
+
 .story_text{
+    
     padding: 2.5%;
     align-items: left;
     justify-content: left;
@@ -439,6 +486,7 @@ html, body {
 .story_text p{
     font-family: "bpsi", serif;
     font-size: clamp(1rem, 2vw, 1.5rem);
+    transition: all 0.5s ease;
     
     margin-top: 2%;
     text-align: justify;
@@ -469,33 +517,58 @@ html, body {
     object-fit: cover;
 }
 
+/*============= Responsive Section02==============*/
 
-.story_ligne02{
-    margin: 2%;
-    padding: 3%;
-    gap: 3%;
+@media screen and (max-width: 768px) {
+    .story_ligne01, .story_ligne02 {
+        flex-direction: column;
+        align-items: center;
+        
+    }
 
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 90%
+    .story_text{
+        border-radius: 18px;
+        border: solid 2px var(--darkeur);
+    }
+
+    .story_image img{
+        display: none;
+    }
+
+    
 }
 
+@media screen and (max-width: 1250px) {
+    .section02{
+        min-height: auto;
+    }
+}
 
-
-
-
+/*==================================!*/
 
 
 /*=================SECTION 03=================!*/
 
+.background_v2{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    filter: blur(10px);
+    scale: 102%;
+    z-index: -1;
+    opacity: 1;
+}
 
 .section03{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: var(--secondaire);
+    background-color: transparent;
+    overflow: hidden; 
     height: auto;
     width: 100%;
 
@@ -504,6 +577,7 @@ html, body {
 /*===== FORMULAIRE =====*/
 
 .formulair{
+    color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -523,7 +597,21 @@ input{
     border: none;
     font-family: "bpsi", serif;
     font-size: 100%;
-}   
+}
+
+.formulair label{
+    font-family: "bpsi", serif;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.ligne0 h2{
+    font-family: "bbh", serif;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    
+    margin-top: 2%;
+    text-align: justify;
+    
+}
 
 .ligne1{
     position: relative;
@@ -613,3 +701,86 @@ input{
 
 /*===== Questionnaire =====*/
 
+.questionnaire{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 5%;
+    padding: 2%;
+    background-color: var(--primaire);
+    border-radius: 8px;
+    width: 50%;
+    height: auto;
+}
+
+.ligne_q0 h2{
+    font-family: "bbh", serif;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    
+    margin-top: 2%;
+    text-align: justify;
+    
+}
+
+.questionnaire div{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 3%;
+}
+
+#ligne_q label{
+    font-family: "bpsi", serif;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.soumettre{
+    background-color: var(--violet-primaire);
+    border: none;
+    color: var(--white);
+    padding: 1.5% 3%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    width: 100%;
+    margin-top: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/*============= Responsive Section03==============*/
+
+@media screen and (max-width: 768px) {
+    .section03{
+    flex-direction: column;
+    }
+
+    .formulair, .questionnaire {
+        width: 90%;
+    }
+
+}
+
+/*==================================!*/
+
+
+
+
+.footer-content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    height: calc(20vw);
+    max-height: 160px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--darkeur);
+    color: var(--white);
+}
