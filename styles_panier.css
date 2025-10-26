@@ -154,6 +154,7 @@ body {
   width: 80%;
   border-radius: 10px;
   background-color:#a45eea11;
+  color: red;
   
 }
 
@@ -468,9 +469,9 @@ input[type=number] {
 }
 
 .b_a_c {
-    position: absolute;
+    position: fixed;
     top: 15%; 
-    left: 45%; 
+    left: 70%; 
     z-index: 10;
 }
 .a_c:checked ~ .l-1{
@@ -489,4 +490,78 @@ input[type=number] {
 }
 footer{
   margin-top: 15%;
+}
+
+@media (max-width: 1500px) {
+  .b_a_c, .garage, .button_a, .button_b, .button_c{
+    display: none;
+  }  
+  .tuning{
+    scale: 1;
+  }
+}
+@media (max-width: 1000px){
+  .anim_nav_b, .anim_nav_t{
+    display: none;
+  }
+  .panier{
+    display: flex;
+    flex-direction: column;
+  }
+  .l{
+    margin: 10% 0 0 0 ;
+    width: 100%;
+    justify-content: center;
+  }
+  .tuning{
+    display: flex;
+
+    width: auto;
+    flex-direction: column;
+
+  }
+  img, .v_chrome{
+    width: 100%;
+    margin: 0 0 0 40%;
+  }
+  .buy_del{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .nombre{
+    width: 80%;
+
+  }
+  
+  .quantite{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+  .del{
+    width: 50%;
+    margin: 5% 0 5% 25%;
+  }
+  .recap{
+    width: 50%;
+    margin-left: 23%;
+  }
+  .description{
+    width: 100%;
+  }
+}
+.semi-ligne-horizontal {
+  height: 3px;
+  width: 80%;
+   margin: 1% 50% 3% 10%;
+   background-color: var(--white);
+   box-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--rouge-secondaire),
+      0 0 82px var(--rouge-secondaire),
+      0 0 92px var(--rouge-secondaire),
+      0 0 102px var(--rouge-secondaire),
+      0 0 151px var(--rouge-secondaire);
 }
