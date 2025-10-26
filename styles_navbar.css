@@ -108,3 +108,11 @@ header {
 .page-actuelle:hover::after {
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 80%;
+        height: 15%;
+        left: 10%;
+    }
+}
