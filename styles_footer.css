@@ -77,7 +77,7 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     footer {
         padding: 5%;
         flex-direction: column;
@@ -88,3 +88,4 @@ footer {
         margin-bottom: 5%;
     }
 }
+
