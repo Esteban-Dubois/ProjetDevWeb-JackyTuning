@@ -74,4 +74,17 @@ footer {
       0 0 92px var(--violet-secondaire),
       0 0 102px var(--violet-secondaire),
       0 0 151px var(--violet-secondaire);
+
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 5%;
+        flex-direction: column;
+    }
+
+    .footer-col {
+        width: 40%;
+        margin-bottom: 5%;
+    }
 }
