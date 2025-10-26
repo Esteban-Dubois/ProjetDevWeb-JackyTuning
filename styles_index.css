@@ -51,6 +51,16 @@ html, body {
     object-fit : cover;
 }
 
+@media (max-width: 768px) {
+   .video-accueil{
+      height: 70vh;
+   }
+
+   #background-video {
+      height: 70vh;
+   }
+}
+
 /*------------------------------
 Première Zone d'Information
 ------------------------------*/
@@ -113,6 +123,16 @@ Première Zone d'Information
    clip: rect(0, 900px, 0, 0);
    animation: noise-after 2s infinite linear alternate-reverse;
    font-family: "bbh",serif;
+}
+
+@media (max-width: 768px) {
+   .glitch {
+      font-size: 40px;
+   }
+   .slogan {
+      width: 90%;
+      margin: 5%;
+   }
 }
 
 @keyframes noise-before {
@@ -306,6 +326,23 @@ Première Zone d'Information
     text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
 
+@media (max-width: 768px) {
+   .zone-texte{
+      width: 90%;
+      margin: 5%;
+   }
+
+   .semi-ligne-horizontal {
+      width: 45%;
+      margin: 1% 50% 1% 5%;
+   }
+
+   .semi-ligne-horizontal2 {
+      width: 45%;
+      margin: 1% 5% 1% 50%;
+   }
+}
+
 /*-----Animation voitures-----*/
 
 .animation-voiture {
@@ -386,23 +423,54 @@ Première Zone d'Information
    }
 }
 
+@media (max-width: 768px) {
+   @keyframes voiture-gauche-droite {
+   0% {
+         left: 6%;
+         opacity: 50%;
+   }
+   10% {
+      opacity: 100%;
+    }
+   40% {
+      opacity: 100%;
+   }
+   50% {
+      left: 88%;
+      opacity: 25%;
+   }
+    
+   50.1% {
+      opacity: 0%; 
+   }
+   100% {
+      opacity: 0%; 
+   }
+   }
+   @keyframes voiture-droite-gauche {
+   0% {
+      left: 95%;
+      opacity: 50%;
+   }
+    10% {
+      opacity: 100%;
+    }
+   40% {
+      opacity: 100%;
+   }
+   50% {
+      left: 6%;
+      opacity: 25%;
+   }
+    
+   50.1% {
+      opacity: 0%; 
+   }
+   100% {
+      opacity: 0%; 
+   }
+   }
 
-
-/*-----Warning-----*/
-
-.avertissement {
-   display: flex;
-   width: 80%;
-   margin: 2% 0 0 10%;
-}
-
-.avertissement>p {
-   color: var(--white);
-}
-
-.avertissement>p>b {
-    font-family: "nsj-b", serif;
-    text-shadow: 2px 2px 2px var(--rouge-secondaire);
 }
 
 /*--------------------------------
@@ -521,6 +589,28 @@ Zone Carousel
    right: 15px;
 }
 
+@media (max-width: 768px) {
+   .titre-neon {
+      font-size: 25px;
+   }
+
+   .div-carousel {
+      padding: 1.5% 0;
+   }
+
+   .fleche-droite , .fleche-gauche {
+      padding: 50px 20px;
+   }
+
+   .fleche-gauche {
+      left: 8px;
+   }
+
+   .fleche-droite {
+      right: 8px;
+   }
+}
+
 /*--------------------------------
 Zone Info 2
 --------------------------------*/
@@ -598,6 +688,16 @@ Zone Info 2
    }
 }
 
+@media (max-width: 768px) {
+   .glitch2 {
+      font-size: 30px;
+   }
+
+   .div-glitch2 {
+      margin-left: 5%;
+   }
+}
+
 /*-----Carousel 3-----*/
 
 .div-carousel3 {
@@ -639,6 +739,16 @@ Zone Info 2
 .element-carousel3-2 {
    width: 100px;
    align-content: center;
+}
+
+@media (max-width: 768px) {
+   .element-carousel3 {
+      flex: 0 0 200px;
+   }
+
+   .element-carousel3-2 {
+      flex: 0 0 100px;
+   }
 }
 
 /*--------------------------------
@@ -770,6 +880,24 @@ Transition Info 2 - Info 3
 
 .etoile {
    display: flex;
+}
+
+@media (max-width: 768px) {
+   .nom-utilisateur {
+      font-size: 25px;
+   }
+
+   .texte-avis {
+      font-size: 20px;
+   }
+
+   .note {
+      font-size: 20px;
+   }
+
+   .etoile-v, .etoile-f {
+      width: 25px;
+   }
 }
 
 /*--------------------------------
@@ -919,6 +1047,48 @@ Zone Rassemblement
   transform: skewX(-15deg);
 }
 
+@media (max-width: 768px) {
+   .div-zone-ou {
+      width: 90%;
+      margin: 0 5%;
+      padding: 5% 0;
+   }
+
+   .ligne1 , .ligne2 , .ligne3 {
+      width: 90%;
+      margin-bottom: 3%;
+   }
+
+   .ligne1 {
+      margin-left: 10%;
+   }
+
+   .div-e-ligne1 , .div-e-ligne2 , .div-e-ligne3{
+      width: 30%;
+   }
+
+   .div-e-ligne1, .div-e-ligne2 {
+      margin-left: 15%;
+   }
+
+   .div-e-ligne2-2 {
+      width: 30%;
+      margin-left: 15%;
+   }
+
+   .div-e-ligne3 {
+      margin-right: 15%;
+   }
+
+   .ligne3 {
+      margin-left: 5%;
+   }
+
+   .texte-ou {
+      flex-direction: column;
+   }
+}
+
 /*--------------------------------
 Zone Info 3
 --------------------------------*/
@@ -968,7 +1138,6 @@ Zone Info 3
    font-size: 25px;
    border-radius: 15px;
    text-align: center;
-   margin-bottom: 1%;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -980,6 +1149,19 @@ Zone Info 3
 .element-carousel2 a {
    text-decoration: none;
    width: 100%;
+}
+
+@media (max-width: 768px) {
+   .div-carousel2 {
+      height: 15vh;
+   }
+   .i1 {
+      background-position: center;
+   }
+
+   .i2 {
+      background-position: center;
+   }
 }
 
 @keyframes rotation-carousel2 {
@@ -1003,4 +1185,22 @@ Zone Info 3
 .i3 {
    background-image: url(images_index/image_apropos.jpg);
    background-position: center;
+}
+
+.titre-neon3 {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+   color: var(--white);
+   text-shadow:
+      0 0 7px var(--white),
+      0 0 10px var(--white),
+      0 0 21px var(--white),
+      0 0 42px var(--violet-secondaire),
+      0 0 82px var(--violet-secondaire),
+      0 0 92px var(--violet-secondaire),
+      0 0 102px var(--violet-primaire),
+      0 0 151px var(--violet-primaire);
+   padding: 2%;
 }
